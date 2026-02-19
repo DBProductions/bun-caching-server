@@ -1,6 +1,6 @@
 # bun-caching-server
 
-This project demonstrates how Bun — a fast all-in-one JavaScript runtime with native bindings for SQL databases and Redis — can be used to build a simple caching server.
+This project demonstrates how Bun v1.3.9 — a fast all-in-one JavaScript runtime with native bindings for SQL databases and Redis — can be used to build a simple caching server.
 
 The server fetches user data from a PostgreSQL database and caches it in Redis.  
 Subsequent requests for the same data are served from the cache, improving response times and reducing database load.  
@@ -14,7 +14,7 @@ The included docker-compose.yml file spins up:
 
 - PostgreSQL (preloaded with sample user data via initdb/init.sql)
 - Redis (for caching)
-- Redis Commander (a web-based Redis GUI)
+- Redis Commander (web-based Redis GUI)
 
 Access Redis Commander at: http://localhost:8081
 
@@ -131,7 +131,9 @@ curl --request PUT \
   --data '{
   "name": "Testput",
   "email": "testput@test.de",
-  "mobile": "2424234234234"
+  "mobile": "2424234234234",
+  "city": "Berlin",
+  "country": "Germany"
 }'
 ```
 

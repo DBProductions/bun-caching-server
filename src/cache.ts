@@ -1,5 +1,5 @@
 import { RedisClient } from 'bun';
-import type { CacheConfig, CacheError, User } from './types';
+import type { CacheConfig, User } from './types';
 
 export class Cache {
   private redis: RedisClient;

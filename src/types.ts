@@ -9,18 +9,6 @@ export interface DatabaseConfig {
   connectionString: string;
 }
 
-export interface CacheError {
-  code: string;
-}
-
-export interface DatabaseError {
-  code: string;
-}
-
-export interface Error {
-  code: string;
-}
-
 export interface User {
   id: number;
   name: string;

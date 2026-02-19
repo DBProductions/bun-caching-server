@@ -1,7 +1,7 @@
-import { Database } from './database';
-import { Cache } from './cache';
-import { Service } from './service';
-import { Controller } from './controller';
+import { Database } from './src/database';
+import { Cache } from './src/cache';
+import { Service } from './src/service';
+import { Controller } from './src/controller';
 
 const db = new Database({
   connectionString: process.env.DATABASE_URL || 'postgres://bun:bun@localhost:5432/bun'

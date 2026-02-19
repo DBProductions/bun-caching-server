@@ -23,7 +23,8 @@ export class Controller {
   }
 
   async createData(headers: any, body: any) {
-    this.checkContentType(headers);
+    const contentTypeError = this.checkContentType(headers);
+    if (contentTypeError) return contentTypeError;
     const user: User = { ...body };
     try {
       const newUser = await this.service.setUser(user);
@@ -41,7 +42,8 @@ export class Controller {
   }
 
   async updateData(headers: any, id: string, body: any) {
-    this.checkContentType(headers);
+    const contentTypeError = this.checkContentType(headers);
+    if (contentTypeError) return contentTypeError;
     try {
       const userData: User = { ...body };
       const user = await this.service.updateUser(id, userData);
@@ -59,7 +61,8 @@ export class Controller {
   }
 
   async replaceData(headers: any, id: string, body: any) {
-    this.checkContentType(headers);
+    const contentTypeError = this.checkContentType(headers);
+    if (contentTypeError) return contentTypeError;
     try {
       const userData: User = { ...body };
       const user = await this.service.replaceUser(id, userData);

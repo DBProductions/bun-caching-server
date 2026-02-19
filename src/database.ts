@@ -1,5 +1,5 @@
 import { SQL } from 'bun';
-import type { DatabaseConfig, DatabaseError, User, PartialUser } from './types';
+import type { DatabaseConfig, User, PartialUser } from './types';
 import { entryExists, selectQuery, insertQuery, updateQuery, replaceQuery, deleteQuery } from './queries';
 
 export class Database {

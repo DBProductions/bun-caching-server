@@ -1177,7 +1177,6 @@ INSERT INTO users (name, email, mobile, city, country) VALUES ('Aloysius Beekela
 INSERT INTO users (name, email, mobile, city, country) VALUES ('Alvin Brown', 'alvin.brown@example.com', '07323 384893', 49, 2);
 INSERT INTO users (name, email, mobile, city, country) VALUES ('Chaïm Engelhart', 'chaim.engelhart@example.com', '(06) 66508504', 343, 1);
 INSERT INTO users (name, email, mobile, city, country) VALUES ('Bernhard Stekelenburg', 'bernhard.stekelenburg@example.com', '(06) 40380070', 344, 1);
-INSERT INTO users (name, email, mobile, city, country) VALUES ('Daryll Varkevisser', 'daryll.varkevisser@example.com', '(06) 83851373', 345, 1);
 INSERT INTO users (name, email, mobile, city, country) VALUES ('Jordan Fabre', 'jordan.fabre@example.com', '06-09-80-53-73', 182, 3);
 INSERT INTO users (name, email, mobile, city, country) VALUES ('Hugh Dixon', 'hugh.dixon@example.com', '07387 420390', 229, 2);
 INSERT INTO users (name, email, mobile, city, country) VALUES ('Travis Mccoy', 'travis.mccoy@example.com', '07603 453324', 111, 2);
@@ -1462,5 +1461,4 @@ INSERT INTO users (name, email, mobile, city, country) VALUES ('Antoine Rey', 'a
 INSERT INTO users (name, email, mobile, city, country) VALUES ('Mauricio Kops', 'mauricio.kops@example.com', '(06) 27212641', 441, 1);
 INSERT INTO users (name, email, mobile, city, country) VALUES ('Rémi Leclerc', 'remi.leclerc@example.com', '06-61-73-01-89', 25, 3);
 INSERT INTO users (name, email, mobile, city, country) VALUES ('Basile Fernandez', 'basile.fernandez@example.com', '06-33-40-97-25', 114, 3);
-INSERT INTO users (name, email, mobile, city, country) VALUES ('Art Riley', 'art.riley@example.com', '07853 794432', 203, 2);
 INSERT INTO users (name, email, mobile, city, country) VALUES ('Roger Welch', 'roger.welch@example.com', '07412 533573', 300, 2);
