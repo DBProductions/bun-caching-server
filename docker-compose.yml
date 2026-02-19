@@ -1,0 +1,27 @@
+version: '3.3'
+services:
+  postgres:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: bun
+      POSTGRES_USER: bun
+      POSTGRES_PASSWORD: bun
+    ports:
+    - 5432:5432
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d:ro
+  redis:
+    image: redis:alpine
+    restart: unless-stopped
+    command: redis-server --requirepass secret_password
+    hostname: redis
+    ports:
+    - 6379:6379
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    restart: always
+    environment:
+      REDIS_HOSTS: local:redis:6379:0:secret_password
+    ports:
+    - 8081:8081
