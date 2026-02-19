@@ -1,4 +1,5 @@
 # dependencies (bun install)
+helper
 node_modules
 venv
 test.db
