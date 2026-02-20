@@ -36,7 +36,6 @@ export class Controller {
       if (error.message.includes("Email already exists") || error.message.includes("Mobile already exists")) {
         return Response.json({ error: error.message }, { status: 409 });
       }
-      console.error("Failed to create:", error);
       return Response.json({ error: "Internal Server Error" }, { status: 500 });
     }
   }
@@ -55,7 +54,6 @@ export class Controller {
       if (error.message.includes("Validation error")) {
         return Response.json({ error: error.message }, { status: 400 });
       }
-      console.error("Failed to update:", error);
       return Response.json({ error: "Internal Server Error" }, { status: 500 });
     }
   }
@@ -74,7 +72,6 @@ export class Controller {
       if (error.message.includes("Validation error")) {
         return Response.json({ error: error.message }, { status: 400 });
       }
-      console.error("Failed to upgrade:", error);
       return Response.json({ error: "Internal Server Error" }, { status: 500 });
     }
   }
@@ -88,7 +85,6 @@ export class Controller {
         return Response.json({}, { status: 200 });
       }
     } catch (error: any) {
-      console.error("Failed to delete:", error);
       return Response.json({ error: "Internal Server Error" }, { status: 500 });
     }
   }

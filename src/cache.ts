@@ -18,7 +18,6 @@ export class Cache {
       await this.redis.ping();
       return true;
     } catch (error) {
-      console.error("cache health check failed:", error);
       return false;
     }
   }

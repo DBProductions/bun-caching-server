@@ -16,8 +16,6 @@ export const getOrCreateCountry = async (db: any, countryName: string): Promise<
 }
 
 export const entryExists = async (db: any, key: string, val: string): Promise<SQL> => {
-  const safeVal = key === 'email' || key === 'mobile' ? '[REDACTED]' : val;
-  console.log(`SELECT 1 FROM users WHERE ${key} = ${safeVal}`);
   return db`SELECT 1 FROM users WHERE ${key} = ${val}`;
 }
 

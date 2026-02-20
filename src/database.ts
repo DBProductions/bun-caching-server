@@ -1,6 +1,6 @@
 import { SQL } from 'bun';
 import type { DatabaseConfig, User, PartialUser } from './types';
-import { entryExists, selectQuery, insertQuery, updateQuery, replaceQuery, deleteQuery } from './queries';
+import { selectQuery, insertQuery, updateQuery, replaceQuery, deleteQuery } from './queries';
 
 export class Database {
   private db: SQL;
@@ -14,7 +14,6 @@ export class Database {
       await this.db`SELECT 1`;
       return true;
     } catch (error) {
-      console.error("DB health check failed:", error);
       return false;
     }
   }
@@ -64,28 +63,6 @@ export class Database {
       return result[0] || null;
     } catch(error: any) {
       throw error;
-    }
-  }
-
-  async emailExists(email: string) {
-    try {
-      //const result = await this.db`SELECT 1 FROM users WHERE email = ${email}`;
-      const result = await entryExists(this.db, 'email', email);
-      return result.length > 0;
-    } catch(error: any) {
-      console.error('Database error in emailExists:', error);
-      return false;
-    }
-  }
-
-  async mobileExists(mobile: string) {
-    try {
-      //const result = await this.db`SELECT 1 FROM users WHERE mobile = ${mobile}`;
-      const result = await entryExists(this.db, 'mobile', mobile);
-      return result.length > 0;
-    } catch(error: any) {
-      console.error('Database error in mobileExists:', error);
-      return false;
     }
   }
 }
